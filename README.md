@@ -1,17 +1,17 @@
-# mavenCentral and jcentral() Gradle plugin
+# mavenCentral() and jcenter() Gradle plugin
 
-This gradle plugin is used for mavenCentral and jcentral library publishing.
-It is created with help from 
+This Gradle plugin is used for ``mavenCentral()`` ``and jcenter()`` library publishing.
+It is created with a help from 
 [Jernej Virag](https://www.virag.si/2015/01/publishing-gradle-android-library-to-jcenter/) and 
 [nuuneoi](https://inthecheesefactory.com/blog/how-to-upload-library-to-jcenter-maven-central-as-dependency/en) blogs.
 
 
-*This plugin is tested with* **Gradle/Gradle Wrapper > 2.10** *and* **Gradle Build Tools 2.1.0**
+*This plugin is tested with* **Gradle/Gradle Wrapper >= 2.10** *and* **Gradle Build Tools 2.1.0**
 
 
-Code below is example of usage, you only need to change extra properties inside **exc {...}** and set credentials inside **gradle.properties** or **local.properties** files:
+Code below is example of usage, you only need to change extra properties inside ``exc {...}`` and set credentials inside ``gradle.properties`` or ``local.properties`` files:
 
-**gradle.properties** or **local.properties** file inside your root folder
+Add the following to your root folder ``gradle.properties`` or ``local.properties``
 
 ```
  # MAVEN
@@ -28,7 +28,7 @@ Code below is example of usage, you only need to change extra properties inside 
  bintray.apikey=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx //bintray api key
 ```
 
-**build.gradle** inside library module
+Add the following to your library module folder ``build.gradle``
 ```
 group = "com.github.kkontus.stringhelper"                // Maven Group ID for the artifact
 archivesBaseName = "stringhelper"
@@ -65,4 +65,4 @@ ext {
 apply from: 'https://raw.githubusercontent.com/kkontus/mavencentral/master/central.gradle'
 ```
 
-With this last line you can use **apply from: 'url'** if you want to use **central.gradle** file published here, or you can download it as raw file and put it inside your library module folder and use it like **apply from: 'central.gradle'**
+With this last line you have an option to use this plugin from Github by applying ``apply from: 'https://raw.githubusercontent.com/kkontus/mavencentral/master/central.gradle'`` or you can download it as raw file and put it inside your library module folder and use it like ``apply from: 'central.gradle'``
