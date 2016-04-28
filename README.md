@@ -9,9 +9,17 @@ It is created with a help from
 *This plugin is tested with* **Gradle/Gradle Wrapper >= 2.10** *and* **Gradle Build Tools 2.1.0**
 
 
-Code below is example of usage, you only need to change extra properties inside ``exc {...}`` and set credentials inside ``gradle.properties`` or ``local.properties`` files:
+Code below is example of usage, you only need to change extra properties inside ``exc {...}`` in your library module ``build.gradle``, set credentials inside ``gradle.properties`` or ``local.properties`` and add plugin classpath to root level ``build.gradle`` file:
 
-Add the following to your root folder ``gradle.properties`` or ``local.properties``
+Add the following to your root level ``build.gradle``
+
+```
+classpath 'com.android.tools.build:gradle:2.1.0'
+classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.6'
+classpath 'com.github.dcendents:android-maven-gradle-plugin:1.3'
+```
+
+Add the following to your root level ``gradle.properties`` or ``local.properties``
 
 ```
  # MAVEN
@@ -30,6 +38,10 @@ Add the following to your root folder ``gradle.properties`` or ``local.propertie
 
 Add the following to your library module folder ``build.gradle`` below your other Gradle configs
 ```
+//... 
+//rest of your library module gradle config code
+//...
+
 group = "com.github.kkontus.stringhelper"                // Maven Group ID for the artifact
 archivesBaseName = "stringhelper"
 //version = "1.0.6-SNAPSHOT"
