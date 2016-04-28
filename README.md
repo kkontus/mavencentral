@@ -1,6 +1,6 @@
 # mavenCentral() and jcenter() Gradle plugin
 
-This Gradle plugin is used for ``mavenCentral()`` ``and jcenter()`` library publishing.
+This Gradle plugin is used for ``mavenCentral()`` and ``jcenter()`` library publishing.
 It is created with a help from 
 [Jernej Virag](https://www.virag.si/2015/01/publishing-gradle-android-library-to-jcenter/) and 
 [nuuneoi](https://inthecheesefactory.com/blog/how-to-upload-library-to-jcenter-maven-central-as-dependency/en) blogs.
@@ -65,4 +65,17 @@ ext {
 apply from: 'https://raw.githubusercontent.com/kkontus/mavencentral/master/central.gradle'
 ```
 
-With this last line you have an option to use this plugin directly from Github by applying ``apply from: 'https://raw.githubusercontent.com/kkontus/mavencentral/master/central.gradle'`` or you can download it as raw file and put it inside your library module folder and use it like ``apply from: 'central.gradle'``
+With this last line you have an option to use this plugin directly from Github by applying:
+
+``apply from: 'https://raw.githubusercontent.com/kkontus/mavencentral/master/central.gradle'`` 
+
+or you can download it as raw file and put it inside your library module folder and use it like 
+
+``apply from: 'central.gradle'``
+
+
+To run Gradle script go to library module and run:
+
+``../gradlew uploadArchives`` for mavenCentral()
+
+``../gradlew bintrayUpload`` for jcenter()
