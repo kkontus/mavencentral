@@ -34,9 +34,9 @@ Add the following to your root level ``gradle.properties`` or ``local.properties
  # JCENTRAL
  bintray.user=xxxxxx //bintray user
  bintray.apikey=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx //bintray api key
- bintray.gpg.password=xxxxxx
- bintray.oss.user=xxxxxx
- bintray.oss.password=xxxxxx
+ bintray.gpg.password=xxxxxx //same as signing.password - gpg pass
+ bintray.oss.user=xxxxxx //same as ossrhUsername - sonatype user
+ bintray.oss.password=xxxxxx //same as ossrhPassword - sonatype user
 ```
 
 Add the following to your library module folder ``build.gradle`` below your other Gradle configs
