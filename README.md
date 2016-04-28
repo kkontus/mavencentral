@@ -34,6 +34,9 @@ Add the following to your root level ``gradle.properties`` or ``local.properties
  # JCENTRAL
  bintray.user=xxxxxx //bintray user
  bintray.apikey=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx //bintray api key
+ bintray.gpg.password=xxxxxx
+ bintray.oss.user=xxxxxx
+ bintray.oss.password=xxxxxx
 ```
 
 Add the following to your library module folder ``build.gradle`` below your other Gradle configs
@@ -44,8 +47,8 @@ Add the following to your library module folder ``build.gradle`` below your othe
 
 group = "com.github.kkontus.stringhelper"                // Maven Group ID for the artifact
 archivesBaseName = "stringhelper"
-//version = "1.0.6-SNAPSHOT"
-version = "1.0.6"
+//version = "1.0.7-SNAPSHOT"
+version = "1.0.7"
 
 ext {
     //project info
