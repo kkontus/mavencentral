@@ -28,7 +28,7 @@ Add the following to your root folder ``gradle.properties`` or ``local.propertie
  bintray.apikey=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx //bintray api key
 ```
 
-Add the following to your library module folder ``build.gradle``
+Add the following to your library module folder ``build.gradle`` below your other Gradle configs
 ```
 group = "com.github.kkontus.stringhelper"                // Maven Group ID for the artifact
 archivesBaseName = "stringhelper"
@@ -65,4 +65,4 @@ ext {
 apply from: 'https://raw.githubusercontent.com/kkontus/mavencentral/master/central.gradle'
 ```
 
-With this last line you have an option to use this plugin from Github by applying ``apply from: 'https://raw.githubusercontent.com/kkontus/mavencentral/master/central.gradle'`` or you can download it as raw file and put it inside your library module folder and use it like ``apply from: 'central.gradle'``
+With this last line you have an option to use this plugin directly from Github by applying ``apply from: 'https://raw.githubusercontent.com/kkontus/mavencentral/master/central.gradle'`` or you can download it as raw file and put it inside your library module folder and use it like ``apply from: 'central.gradle'``
