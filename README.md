@@ -6,18 +6,25 @@ It is created with a help from
 [nuuneoi](https://inthecheesefactory.com/blog/how-to-upload-library-to-jcenter-maven-central-as-dependency/en) blogs.
 
 
-*This plugin is tested with* **Gradle/Gradle Wrapper >= 2.10** *and* **Gradle Build Tools 2.1.0**
-
+*This plugin is tested with* **Gradle/Gradle Wrapper = 2.14.1** *and* **Gradle Build Tools 2.2.0**
 
 Code below is example of usage, you only need to change extra properties inside ``exc {...}`` in your library module ``build.gradle``, set credentials inside ``gradle.properties`` or ``local.properties`` and add plugin classpath to root level ``build.gradle`` file:
 
 Add the following to your root level ``build.gradle``
 
 ```
-classpath 'com.android.tools.build:gradle:2.1.0'
+classpath 'com.android.tools.build:gradle:2.2.0'
 classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.6'
 classpath 'com.github.dcendents:android-maven-gradle-plugin:1.3'
 ```
+
+```
+plugins {
+    id "com.jfrog.bintray" version "1.7.1"
+    id "com.github.dcendents.android-maven" version "1.4.1"
+}
+```
+
 
 Add the following to your root level ``gradle.properties`` or ``local.properties``
 
