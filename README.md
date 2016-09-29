@@ -14,8 +14,6 @@ Add the following to your root level ``build.gradle``
 
 ```
 classpath 'com.android.tools.build:gradle:2.2.0'
-classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.6'
-classpath 'com.github.dcendents:android-maven-gradle-plugin:1.3'
 ```
 
 ```
